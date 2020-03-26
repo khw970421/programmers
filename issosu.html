@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	function issosu1(k){
+		let j;
+		for(j=2;j<=k;j++)
+		{
+			if(k%j==0)//나눠질때 for문을 끝낸다.
+			{
+				break;
+			}
+		}
+		if(k==j)//나눠지는게 하나도 없고 자기자신으로 밖에 안나눠질때 (소수일때)
+		{
+			return true;
+		}
+		//그외의 경우에는 false
+		return false;
+	}
+
+	function issosu2(num) 
+	{
+    if( num < 2) return false;
+    for (var i =2; i <= num / 2 ; i++) {			//num의 반의값까지 반복하는데
+        if( num % i == 0) return false;				//나눠지는게 있으면 false 리턴
+    }
+    return true;									//나눠지는게 없으면 true리턴
+	}
+
+	console.log(issosu1(7));
+	console.log(issosu1(10));
+	console.log('---------');
+	console.log(issosu2(7));
+	console.log(issosu2(10));
+
+	</script>
+</body>
+</html>
