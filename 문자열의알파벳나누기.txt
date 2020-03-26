@@ -1,0 +1,37 @@
+
+function solution(numbers) {
+   var answer=0;
+    
+    console.log(numbers);
+    
+    let a=[];
+    let p;
+    p=parseInt(numbers);
+    
+    for(let i=0;i<numbers.length;i++)
+        {
+            a[i]=p%10;
+            p=Math.floor(p/10);
+        }
+    console.log(a);
+    
+    
+    let b=[];
+    b=numbers.split('');
+    console.log(b)
+    return answer;
+}
+
+/*입력값 〉	"17"
+기댓값 〉	3
+실행 결과 〉	실행한 결괏값 0이(가) 기댓값 3와(과) 다릅니다.
+출력 〉	17
+[ 7, 1 ]
+[ '1', '7' ]
+//입력값 〉	"011"
+기댓값 〉	2
+실행 결과 〉	실행한 결괏값 0이(가) 기댓값 2와(과) 다릅니다.
+출력 〉	011
+[ 1, 1, 0 ]
+[ '0', '1', '1' ]
+*/
